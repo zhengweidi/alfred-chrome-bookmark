@@ -50,7 +50,7 @@ func pinyinFuzzyMatch(chnStr string, query string) bool {
 }
 
 func enFuzzyMatch(enStr string, query string) bool {
-	return strings.Contains(enStr, query)
+	return strings.Contains(strings.ToLower(enStr), strings.ToLower(query))
 }
 
 var wf *aw.Workflow
